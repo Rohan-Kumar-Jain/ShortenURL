@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { login } from "./UserFunctions";
+import { register } from "./UserFunctions";
 import "../style/Css.css";
 import GoogleLogin from "react-google-login";
 import logo2 from "../images/login.png";
@@ -17,10 +18,21 @@ class Login extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-  signup=(res)=> {
+  signup = (res) => {
+    const newUser = {
+      first_name: res.profileObj.givenName,
+      last_name: res.profileObj.familyName,
+      email: res.profileObj.email,
+      // token: res.googleId,//extra
+      password: res.googleId,
+    };
+
+    register(newUser).then((res) => {
+      this.props.history.push(`/login`);
+    });
     return true;
     //comming soon...
-  }
+  };
 
   responseGoogle = (response) => {
     console.log(response);
@@ -40,7 +52,7 @@ class Login extends Component {
 
     // login(user).then(res => {
     //   if (res) {
-    this.props.history.push(`/shorten`);
+        this.props.history.push(`/shorten`);
     //   }
     // })
   }
@@ -74,13 +86,10 @@ class Login extends Component {
                     onChange={this.onChange}
                   />
                 </div>
-                {/* <button
-                  type="submit"
-                  className="btn btn-lg btn-primary btn-block"
+                <div
+                  className="createAccountButton"
+                  style={{ display: "flex" }}
                 >
-                  Sign in
-                </button> */}
-                <div className="createAccountButton">
                   <button
                     // type="button"
                     class="btn btn-outline-light"
@@ -89,13 +98,30 @@ class Login extends Component {
                     Log in
                   </button>
                   <button
+                    style={{
+                      borderColor: "#28384A",
+                      color: "#2C96DF",
+                      alignSelf: "flex-end",
+                    }}
                     type="button"
                     class="btn btn-outline-light"
                     onClick={() => {
                       this.props.history.push(`/register`);
                     }}
                   >
-                    Create Account
+                    forget password?
+                  </button>
+                </div>
+                <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                  <button
+                    style={{ borderColor: "#28384A", color: "#2C96DF" }}
+                    type="button"
+                    class="btn btn-outline-light"
+                    onClick={() => {
+                      this.props.history.push(`/register`);
+                    }}
+                  >
+                    Create New Account
                   </button>
                 </div>
               </form>

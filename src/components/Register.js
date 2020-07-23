@@ -107,13 +107,6 @@ class Register extends Component {
                     onChange={this.onChange}
                   />
                 </div>
-                {/* <button
-                  type="submit"
-                  className="btn btn-lg btn-primary btn-block"
-                  style={{height:"40px"}}
-                >
-                  Register!
-                </button> */}
                 {this.state.errorOccur && (
                   <div style={{color:"red" ,margin:"5px"}}>{this.state.error}</div>
                 )}
