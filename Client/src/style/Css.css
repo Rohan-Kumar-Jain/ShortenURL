@@ -1,0 +1,94 @@
+
+
+.contain{
+    background-color: #28384A;
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .textShorten{
+       color:white;
+       text-align: center;
+       margin:50px;
+       font-size:5vh;
+   }
+   
+   .btn-primary,
+   .btn-primary:hover,
+   .btn-primary:active,
+   .btn-primary:visited,
+   .btn-primary:focus {
+       background-color:#2C96DF;
+       border-color: #2C96DF;
+   }
+   
+   .button{
+       background-color:#2C96DF;
+       border-color: #2C96DF;
+       color:white;
+       border-radius: 15px;
+       padding:5px;
+       margin:10px
+   }
+   
+   .heading{
+       color: white;
+       font-size:3.5vw;
+   }
+   
+   .createAccountButton{
+       display: flex;
+       justify-content: end;
+       justify-items: end;
+       align-items: end;
+       align-self: end;
+       align-content: end;
+   }
+   
+   .brand{
+       color: white;
+       font-size:3vw;
+   }
+   
+   .cnt{
+       margin-top:30vh;
+   }
+   
+   .sho{
+       display:flex;
+       flex-direction: row;
+       /* flex-wrap:wrap; */
+   }
+   
+   .nopadding {
+       padding: 0 !important;
+       margin: 0 !important;
+    }
+
+    .googlelogindiv{
+        margin: 10px;
+        display: flex;
+        justify-content:center;
+    }
+
+    .flexdiv{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .urlheader{
+        margin: 55px;
+        background-color: #28384A;
+        color: #28384A
+    }
+
+    .outerdiv{
+            display: flex;
+            margin-top:20px;
+            background-color:#28384A;
+            padding: 10vw;
+    }
