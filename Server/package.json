@@ -19,7 +19,7 @@
     "cors": "^2.8.4",
     "dotenv": "^8.2.0",
     "express": "^4.16.3",
-    "jsonwebtoken": "^7.4.2",
+    "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.19",
     "mailgun-js": "^0.22.0",
     "mongodb": "^3.1.6",
